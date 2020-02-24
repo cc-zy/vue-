@@ -17,7 +17,18 @@ module.exports={
 	devServer: {
 	  contentBase: path.join(__dirname, "src"),
 	  port: 9000,
-	  open:true
+	  open:true,
+	  proxy: {
+			"/api": {
+			  target: "http://localhost:8989",
+			  ws: true,
+			  changeOrigin: true,
+			  pathRewrite: {
+			    "^/api": "api"
+			  }
+			}
+	        
+	      }
 	},
 	plugins:[//配置插件的节点
 	//		new webpack.HotModuleReplacementPlugin() //这是启动热更新的第三步
@@ -44,6 +55,7 @@ module.exports={
 			"vue$":"vue/dist/vue.js"
 		}
 	}
+
 }
 
 

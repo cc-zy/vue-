@@ -8,3 +8,6 @@
 
 ## .gitgnore 忽略文件
 ##  node_modules 包不用上传  .idea .vscode .git
+##  
+##  
+##  如何获取数据 vue-resource
