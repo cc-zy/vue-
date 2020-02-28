@@ -20,13 +20,22 @@ module.exports={
 	  open:true,
 	  proxy: {
 			"/api": {
+			  target: "http://czy2020.xyz:8989",
+			  ws: true,
+			  changeOrigin: true,
+			  pathRewrite: {
+			    "^/api": ""
+			  }
+			},
+			"/host": {
 			  target: "http://localhost:8989",
 			  ws: true,
 			  changeOrigin: true,
 			  pathRewrite: {
-			    "^/api": "api"
+			    "^/host": ""
 			  }
 			}
+			
 	        
 	      }
 	},

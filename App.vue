@@ -53,6 +53,7 @@
 
 .app-container{
 	padding-top: 40px;
+	padding-bottom: 40px;
 	overflow-x: hidden;
 }
 </style>
