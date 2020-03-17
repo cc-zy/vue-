@@ -24,7 +24,17 @@ module.exports={
 			{test:/\.vue$/,use:'vue-loader'},  //处理.vue的loader
 			{test: /\.less$/, use: ["style-loader",'css-loader','less-loader']},
 			{test: /\.scss$/, use: ["style-loader",'css-loader','sass-loader']},
-			{test: /\.(jpg|png|gif|bmp|jpeg)$/, use: "url-loader?limit=8000"},
+			{test: /\.(jpg|png|gif|bmp|jpeg)$/, use: [{
+				loader: 'url-loader',
+					options: {
+						esModule: false, // 这里设置为false
+						name: '[name].[ext]',
+						limit: 10240,
+						outputPath:'images',
+						publicPath:'./images'  //设置打包后图片的引入路径  ./images/a.jpg
+					}
+				}]
+			},
 			{test: /\.(tff|eot|svg|woff|woff2|ttf)$/, use: "url-loader"},
 			{test:/\.js$/,use:'babel-loader',exclude:/node_modules/}
 		]

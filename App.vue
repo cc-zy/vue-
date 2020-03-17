@@ -56,4 +56,7 @@
 	padding-bottom: 40px;
 	overflow-x: hidden;
 }
+.mint-header-title{
+	z-index: 99;
+}
 </style>

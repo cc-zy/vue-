@@ -33,10 +33,10 @@ module.exports=merge(common,{
 	      }
 	},
 	plugins:[//配置插件的节点
-			// new webpack.HotModuleReplacementPlugin(), //这是启动热更新的第三步
-			// new Uglifyjs({
-			// 	sourceMap:true
-			// })
+			new webpack.HotModuleReplacementPlugin(), //这是启动热更新的第三步
+		/* 	new Uglifyjs({
+				sourceMap:true
+			}) */
 	]
 
 })
