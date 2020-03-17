@@ -1,3 +1,6 @@
+# 移动端商城小项目 vue+node(express)+json文件(模仿数据)
+
+
 # git init 
 # git add . 
 # git status 
